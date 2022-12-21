@@ -1,32 +1,123 @@
-* {
-  /*font-size: 100%;*/
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+/*______ general ______*/
+body {
+	height: 100vh; /*100vh means that the initial body height will take 100% of the viewport height*/
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	font-family: Roboto, sans-serif;
+	display: flex;
+	flex-direction: column;
+}
+html, body {
+	overflow-x: hidden;
+}
+.body {
+	flex-direction: column;
+	justify-content: space-between;
+	flex: 1; /* Adding flex: 1 to a class, makes each of the items grow to fill the available space https://www.theodinproject.com/lessons/foundations-alignment*/
+	display: flex;
+	flex-direction: column;
 }
 
-.header-links,
+/*______ styling ______*/
+a,
 .hero-secondary-text {
-  font-size: 18px;
-  color: #e5e7eb;
+	font-size: 18px;
+	color: #e5e7eb;
 }
 
 .header-logo {
-  font-size: 24px;
+	font-size: 24px;
+	font-weight: bold;
 }
+.header {
+	display: flex;
+	align-items: center;
+	align-items: center; /*align-items aligns horizontally */
+	justify-content: space-between; /*justify-content aligns items vertically  */
+	padding: 24px;
+	margin: 0 -9999rem;
+  /* add back negative margin value */
+  padding: 0.25rem 9999rem;
+}
+ul {
+	/* this removes the dots on the list items*/
+	list-style-type: none;
 
+	display: flex;
+	gap: 8px; /*adds space between white box and yellow header*/
+	margin: 0;
+	padding: 0;
+}
+a {
+	/* this removes the line under the links */
+	text-decoration: none;
+}
 .hero-main-text {
-  font-size: 48px;
-  font-weight: bolder;
+	font-size: 48px;
+	font-weight: bolder;
 }
-
 .header-logo,
-.hero-main-text {
-  color: #f9faf8;
+.hero-main-text,
+.footer {
+	color: #f9faf8;
 }
-
-.section-1 {
-  background-color: #1f2937;
+.section-1,
+.header,
+.footer {
+	background-color: #1f2937;
 }
-
+/*______ sections ______*/
+.section-1 .wrapper {
+	display: flex;
+  flex: 1;
+	flex-direction: row;
+	margin: 0 -9999rem;
+	padding: 0.25rem 9999rem;
+}
+.information-header {
+	font-weight: bolder;
+	size: 36px;
+	color: #1f2937;
+	text-align: center;
+}
+.quote {
+	size: 36px;
+	font-style: italic;
+}
+.cards {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
 .sign-up-1 {
+	border: none;
+	border-radius: 8px;
+	color: white;
+	padding: 8px 24px;
+}
+.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 200px;
+}
+img {
+	border-radius: 8px;
+	height: 200px;
+	width: 200px;
+	border: 2px solid #3882f6;
+}
+.description {
+	text-align: center;
+}
+.sign-up-1,
+.blue-box {
+	background: #3882f6;
+}
+
+.footer {
+	display: flex;
+	justify-content: center;
 }
