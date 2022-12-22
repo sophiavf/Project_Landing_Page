@@ -4,42 +4,31 @@ body {
 	width: 100vw;
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
 	font-family: Roboto, sans-serif;
 	display: flex;
 	flex-direction: column;
+	flex: 1;
 }
-html, body {
+body,
+html {
 	overflow-x: hidden;
 }
-.body {
-	flex-direction: column;
-	justify-content: space-between;
-	flex: 1; /* Adding flex: 1 to a class, makes each of the items grow to fill the available space https://www.theodinproject.com/lessons/foundations-alignment*/
-	display: flex;
-	flex-direction: column;
-}
-
 /*______ styling ______*/
 a,
 .hero-secondary-text {
 	font-size: 18px;
 	color: #e5e7eb;
 }
-
 .header-logo {
 	font-size: 24px;
 	font-weight: bold;
+	color: #f9faf8;
 }
 .header {
 	display: flex;
-	align-items: center;
 	align-items: center; /*align-items aligns horizontally */
 	justify-content: space-between; /*justify-content aligns items vertically  */
-	padding: 24px;
-	margin: 0 -9999rem;
-  /* add back negative margin value */
-  padding: 0.25rem 9999rem;
+	background-color: #1f2937;
 }
 ul {
 	/* this removes the dots on the list items*/
@@ -51,40 +40,59 @@ ul {
 	padding: 0;
 }
 a {
-	/* this removes the line under the links */
-	text-decoration: none;
+	text-decoration: none; /* this removes the line under the links */
 }
 .hero-main-text {
 	font-size: 48px;
 	font-weight: bolder;
-}
-.header-logo,
-.hero-main-text,
-.footer {
+	margin: 0;
 	color: #f9faf8;
 }
-.section-1,
-.header,
-.footer {
-	background-color: #1f2937;
+.quote {
+	font-size: 36px;
+	font-style: italic;
+}
+.img-1,
+.img-2,
+.img-3,
+.img-4 {
+	border-radius: 8px;
+	height: 160px;
+	width: 160px;
+	border: 2px solid #3882f6;
+	margin: 10px;
+}
+.hero-photo {
+	margin-left: auto;
+	margin-right: auto;
+	width: 40%;
+}
+.container {
+	margin: 24px;
 }
 /*______ sections ______*/
-.section-1 .wrapper {
+.header,
+.section-1,
+.section-2,
+.section-3,
+.section-4 {
+	--contentWidth: 900px;
+	padding: 2rem max(2rem, 50vw - var(--contentWidth) / 2);
+	padding-top: 48px;
+	padding-bottom: 48px;
+}
+.section-1 {
 	display: flex;
-  flex: 1;
+	flex: 1;
 	flex-direction: row;
-	margin: 0 -9999rem;
-	padding: 0.25rem 9999rem;
+	align-items: center;
+	background-color: #1f2937;
 }
 .information-header {
-	font-weight: bolder;
-	size: 36px;
+	font-weight: 800; /*extra-bold*/
+	font-size: 36px;
 	color: #1f2937;
 	text-align: center;
-}
-.quote {
-	size: 36px;
-	font-style: italic;
 }
 .cards {
 	display: flex;
@@ -102,12 +110,8 @@ a {
 	flex-direction: column;
 	justify-content: center;
 	width: 200px;
-}
-img {
-	border-radius: 8px;
-	height: 200px;
-	width: 200px;
-	border: 2px solid #3882f6;
+	padding: 12px; 
+	margin: 12px; 
 }
 .description {
 	text-align: center;
@@ -116,8 +120,9 @@ img {
 .blue-box {
 	background: #3882f6;
 }
-
 .footer {
 	display: flex;
 	justify-content: center;
+	background-color: #1f2937;
+	color: #f9faf8;
 }
