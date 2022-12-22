@@ -1,3 +1,6 @@
+* {
+	border: 2px solid red;
+}
 /*______ general ______*/
 body {
 	height: 100vh; /*100vh means that the initial body height will take 100% of the viewport height*/
@@ -35,7 +38,7 @@ ul {
 	list-style-type: none;
 
 	display: flex;
-	gap: 8px; /*adds space between white box and yellow header*/
+	gap: 16px;
 	margin: 0;
 	padding: 0;
 }
@@ -52,23 +55,31 @@ a {
 	font-size: 36px;
 	font-style: italic;
 }
+.author {
+	text-align: right;
+	font-weight: bold;
+}
 .img-1,
 .img-2,
 .img-3,
 .img-4 {
 	border-radius: 8px;
-	height: 160px;
-	width: 160px;
+	height: 13vw;
+	width: 13vw;
 	border: 2px solid #3882f6;
-	margin: 10px;
+	margin: 5px;
 }
 .hero-photo {
-	margin-left: auto;
-	margin-right: auto;
 	width: 40%;
 }
-.container {
-	margin: 24px;
+.blue-box {
+	background: #3882f6;
+	width: 55vw;
+	border-radius: 8px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 48px; 
 }
 /*______ sections ______*/
 .header,
@@ -87,6 +98,24 @@ a {
 	flex-direction: row;
 	align-items: center;
 	background-color: #1f2937;
+
+	justify-content: space-between;
+}
+.section-2 {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	align-items: center;
+	justify-content: center;
+}
+.section-3 {
+	background-color: #e5e7eb;
+}
+.section-4 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 1; 
 }
 .information-header {
 	font-weight: 800; /*extra-bold*/
@@ -99,30 +128,43 @@ a {
 	flex-direction: row;
 	justify-content: space-between;
 }
+.card {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 15vw;
+	padding: 8px;
+}
 .sign-up-1 {
 	border: none;
 	border-radius: 8px;
 	color: white;
 	padding: 8px 24px;
-}
-.card {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	width: 200px;
-	padding: 12px; 
-	margin: 12px; 
+	background: #3882f6;	
+	text-align: center;
 }
 .description {
 	text-align: center;
 }
-.sign-up-1,
-.blue-box {
+.sign-up-2 {
 	background: #3882f6;
+	border: 2px solid white;
+	color: white;
+	border-radius: 8px;	
+	font-size: small;
+	margin: 0;
+	white-space: nowrap;	
+	text-align: center;
+	padding: 8px 24px;
 }
 .footer {
 	display: flex;
 	justify-content: center;
 	background-color: #1f2937;
 	color: #f9faf8;
+}
+.wrapper {
+	padding: 48px;
 }
